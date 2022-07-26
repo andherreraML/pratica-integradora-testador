@@ -1,0 +1,16 @@
+package com.testador.testador.service;
+
+import com.testador.testador.model.TestCase;
+
+import java.util.Date;
+import java.util.List;
+
+public interface ITestCaseService{
+
+    TestCase create(TestCase testCase);
+    List<TestCase> readAll();
+    List<TestCase> readByUpdateDate(Date date);
+    TestCase readById(long id);
+    TestCase updatePartial(TestCase testCase);
+    void delete(long id);
+}
