@@ -5,7 +5,7 @@ import com.testador.testador.repository.TestCaseRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -25,7 +25,7 @@ public class TestCaseService implements ITestCaseService{
     }
 
     @Override
-    public List<TestCase> readByUpdateDate(Date date) {
+    public List<TestCase> readByUpdateDate(LocalDate date) {
         return repository.findByLastUpdateAfter(date);
     }
 
